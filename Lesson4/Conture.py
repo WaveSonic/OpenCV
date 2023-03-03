@@ -7,7 +7,7 @@ new_img = np.zeros(img.shape, dtype='uint8')
 
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 img = cv2.GaussianBlur(img, (5, 5), 0)
-img = cv2.Canny(img, 100, 140)
+img = cv2.Canny(img, 1, 1)
 
 con, hir = cv2.findContours(img, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 cv2.drawContours(new_img, con, -1, (0, 0, 255), 1)
